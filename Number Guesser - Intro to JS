@@ -1,0 +1,27 @@
+const generateTarget = () => {
+    return(Math.floor(Math.random() * 10));
+};
+
+function compareGuesses(human, comp, target) {
+const hdiff = Math.abs(target - human);
+const cdiff = Math.abs(target - comp);
+if (hdiff === cdiff){
+    return true;
+} else if (hdiff > cdiff){
+    return false;
+} else {
+    return true;
+}
+}
+
+function updateScore(winner) {
+if (winner === 'human'){
+humanScore++;
+} else if(winner === 'computer'){
+    computerScore++;
+}
+}
+
+const advanceRound = () => {
+    currentRoundNumber ++;
+}
